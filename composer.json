@@ -1,13 +1,23 @@
 {
-  "name": "ezsystems/ezplatform-i18n",
-  "description": "Meta repository to store every eZ Platform translations. This should be used during development to ease synchronization with Crowdin. SHOULD NOT BE USED IN PRODUCTION",
-  "license": "GPL-2.0",
-  "require": {
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "2.0.x-dev"
-    }
-  },
-  "bin": ["bin/synchronize-translations.sh"]
+    "name": "ezsystems/ezplatform-i18n",
+    "description": "Meta repository to store every eZ Platform translations. This should be used during development to ease synchronization with Crowdin. SHOULD NOT BE USED IN PRODUCTION",
+    "license": "GPL-2.0",
+    "require": {
+        "php": "^7.1",
+        "symfony/console": "^4.2",
+        "symfony/dotenv": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Command\\": "src/Command/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    },
+    "bin": [
+        "bin/synchronize-translations.sh"
+    ]
 }
